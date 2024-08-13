@@ -1,8 +1,11 @@
 import cv2 as cv
 import numpy as np
 import os
+from time import time
 
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
+
+
 def findClickPosition(invent_img_path, fish_image_path, threshold=0.4, debug_mode=None):
     invent_img = cv.imread(invent_img_path, cv.IMREAD_UNCHANGED)
     fish_img = cv.imread(fish_image_path, cv.IMREAD_UNCHANGED)
